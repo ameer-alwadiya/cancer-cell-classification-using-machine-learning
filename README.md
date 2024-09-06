@@ -44,44 +44,11 @@ The primary aim of this project is to:
 
 ## Getting Started
 
-To get started with this project, follow these steps:
-
-1. **Clone the Repository:**
+**Clone the Repository:**
    ```bash
    git clone https://github.com/ameer-alwadiya/cancer-cell-classification-using-machine-learning.git
    cd cancer-cell-classification-using-machine-learning
    ```
-
-2. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Prepare the Dataset:**
-   - Place your dataset in the `data/` directory.
-   - Follow the instructions in `data_preparation.py` for dataset preparation and preprocessing.
-
-4. **Train the Model:**
-   - Run the training script:
-     ```bash
-     python train_model.py
-     ```
-
-5. **Evaluate and Compare Models:**
-   - Use the provided scripts to evaluate model performance and compare it with pre-trained models.
-
-6. **Generate Interpretations:**
-   - Apply interpretability techniques using the scripts in `interpretation/`.
-
-## File Structure
-
-- `data/`: Contains the dataset and scripts for data preparation.
-- `models/`: Includes model definitions and training scripts.
-- `interpretation/`: Scripts for model interpretability and explanation.
-- `requirements.txt`: List of dependencies required to run the project.
-- `train_model.py`: Script for training the deep learning model.
-- `evaluate_models.py`: Script for evaluating and comparing models.
-- `README.md`: This README file.
 
 ## Contributing
 
