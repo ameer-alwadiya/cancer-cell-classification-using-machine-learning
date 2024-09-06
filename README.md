@@ -1,102 +1,88 @@
 # Cancer Cell Classification Using Machine Learning
 
-This project focuses on building a machine learning model for the classification of cancer cells. By utilizing various machine learning techniques, the goal is to accurately differentiate between cancerous and non-cancerous cells based on input features.
+This project aims to develop an accurate, explainable deep learning model to classify cancer cells into healthy and metastatic categories. The project also focuses on enhancing the interpretability of the model's predictions by identifying critical cellular features that influence classification decisions.
 
-## Table of Contents
+## Aim
 
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Models Used](#models-used)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+The primary aim of this project is to:
+- Develop an accurate and explainable deep learning model for classifying cells into healthy and metastatic categories.
+- Enhance the interpretability of the model’s predictions by identifying key cellular features that impact classification decisions.
 
-## Overview
+## Objectives
 
-Cancer classification is a crucial problem in the medical field. This project implements machine learning algorithms to classify cancer cells based on a dataset containing features related to cell characteristics. The aim is to build an accurate model to assist in diagnosis.
+### Basic Objectives
 
-## Dataset
+1. **Literature Review on Cancer Cell Classification:**
+   - Analyze the dataset of healthy and metastatic cells, including explanations of primary tumor types and individual cell data.
+   - Conduct a comprehensive literature review on the application of machine learning and deep learning algorithms in cancer cell classification.
 
-The dataset used in this project includes various features extracted from cell nuclei of biopsy images. Each instance in the dataset is labeled as either cancerous or non-cancerous.
+2. **Segmentation-Based Extraction Methods:**
+   - Develop and apply segmentation techniques to extract individual cells from microscopy images.
+   - Compare the extracted cells with manually extracted cell data images.
 
-### Dataset Features:
+3. **Model Design and Implementation:**
+   - Develop a deep learning model for classifying healthy and metastatic cells.
+   - Use appropriate neural network architectures and evaluate their performance on the provided dataset.
 
-- Mean radius
-- Mean texture
-- Mean smoothness
-- Mean compactness
-- Mean symmetry
-- Fractal dimension
-- ... and more.
+4. **Address Class Imbalance:**
+   - Investigate the impact of class imbalance on model accuracy and performance metrics.
+   - Implement strategies to mitigate the effects of class imbalance and evaluate preprocessing techniques.
 
-### Labels:
-- `1`: Malignant (cancerous)
-- `0`: Benign (non-cancerous)
+### Advanced Objectives
 
-The dataset is available in the repository under the `data/` directory.
+1. **Comparison with Pre-trained Models:**
+   - Compare the performance of the newly developed model with two pre-trained models.
+   - Analyze differences in accuracy, interpretability, and robustness across different model architectures.
 
-## Installation
+2. **Model Interpretation and Explainability:**
+   - Develop and apply techniques such as Grad-CAM, Guided Grad-CAM, and High-Resolution Guided Grad-CAM to describe the reasoning behind the model’s decisions.
+   - Focus on identifying and visualizing key features influencing model predictions.
 
-To run the project, you'll need to have Python installed, along with the required libraries.
+3. **Comparison of Extraction Methods:**
+   - Evaluate the performance of the model on both manually extracted and segmentation-extracted cells.
+   - Analyze the differences in explainability and accuracy between these extraction techniques, particularly in the context of imbalanced classes.
 
-1. Clone the repository:
+## Getting Started
 
+To get started with this project, follow these steps:
+
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/ameer-alwadiya/cancer-cell-classification-using-machine-learning.git
    cd cancer-cell-classification-using-machine-learning
    ```
 
-2. Install the required dependencies:
-
+2. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
+3. **Prepare the Dataset:**
+   - Place your dataset in the `data/` directory.
+   - Follow the instructions in `data_preparation.py` for dataset preparation and preprocessing.
 
-Once the project is set up, you can run the following command to train the model:
+4. **Train the Model:**
+   - Run the training script:
+     ```bash
+     python train_model.py
+     ```
 
-```bash
-python train_model.py
-```
+5. **Evaluate and Compare Models:**
+   - Use the provided scripts to evaluate model performance and compare it with pre-trained models.
 
-You can also test the model using the following command:
+6. **Generate Interpretations:**
+   - Apply interpretability techniques using the scripts in `interpretation/`.
 
-```bash
-python test_model.py
-```
+## File Structure
 
-### Jupyter Notebook
-
-Alternatively, you can explore the data and run the training process in a Jupyter Notebook. The `CancerCellClassification.ipynb` notebook walks through the process of loading the dataset, training the model, and evaluating its performance.
-
-## Models Used
-
-This project explores various machine learning models, including:
-
-- **Logistic Regression**: A simple baseline model.
-- **Support Vector Machine (SVM)**: A powerful model for classification tasks.
-- **Random Forest**: An ensemble method known for good accuracy in classification problems.
-- **K-Nearest Neighbors (KNN)**: A distance-based algorithm that classifies based on proximity to other data points.
-
-## Results
-
-The model evaluation is done using common metrics, including:
-
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-Score**
-
-The project report and evaluation results are available in the `results/` directory.
+- `data/`: Contains the dataset and scripts for data preparation.
+- `models/`: Includes model definitions and training scripts.
+- `interpretation/`: Scripts for model interpretability and explanation.
+- `requirements.txt`: List of dependencies required to run the project.
+- `train_model.py`: Script for training the deep learning model.
+- `evaluate_models.py`: Script for evaluating and comparing models.
+- `README.md`: This README file.
 
 ## Contributing
 
-If you'd like to contribute to the project, feel free to fork the repository and submit a pull request.
-
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Submit a pull request
+Feel free to contribute to this project by submitting issues or pull requests. For any questions or suggestions, please open an issue in the repository.
